@@ -1,6 +1,7 @@
 package cn.felord.oauth2;
 
 import cn.felord.oauth2.wechat.DelegatingOAuth2UserService;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
@@ -23,7 +24,8 @@ class SpringSecurityOauth2ClientApplicationTests {
     void contextLoads() {
     }
 
-    public static void main(String[] args) {
+    @SuppressWarnings("unchecked")
+	public static void main(String[] args) {
 
         OAuth2UserService<OAuth2UserRequest, OAuth2User> userService1 = mock(OAuth2UserService.class);
         OAuth2UserService<OAuth2UserRequest, OAuth2User> userService2 = mock(OAuth2UserService.class);

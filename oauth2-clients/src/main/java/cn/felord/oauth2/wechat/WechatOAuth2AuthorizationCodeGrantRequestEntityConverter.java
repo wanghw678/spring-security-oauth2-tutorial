@@ -17,6 +17,7 @@
 package cn.felord.oauth2.wechat;
 
 import com.nimbusds.jose.jwk.OctetSequenceKey;
+
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -34,6 +35,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.crypto.spec.SecretKeySpec;
+
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.Collections;
@@ -101,7 +103,8 @@ public class WechatOAuth2AuthorizationCodeGrantRequestEntityConverter
         return formParameters;
     }
 
-    private static HttpHeaders getDefaultTokenRequestHeaders() {
+    @SuppressWarnings({ "unused", "deprecation" })
+	private static HttpHeaders getDefaultTokenRequestHeaders() {
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON_UTF8));
         final MediaType contentType = MediaType.valueOf(MediaType.APPLICATION_FORM_URLENCODED_VALUE + ";charset=UTF-8");

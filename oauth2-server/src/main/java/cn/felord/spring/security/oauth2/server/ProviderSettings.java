@@ -11,6 +11,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 import java.util.Map;
 
+@SuppressWarnings("serial")
 public final class ProviderSettings extends AbstractSettings {
 
     private ProviderSettings(Map<String, Object> settings) {

@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.3</version>
+        <version>2.6.9</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.felord</groupId>
@@ -15,6 +15,8 @@
     <description>oauth2-clients</description>
     <properties>
         <java.version>1.8</java.version>
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
     </properties>
     <dependencies>
         <dependency>
